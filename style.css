@@ -1,0 +1,151 @@
+:root {
+  --color-main: #1E3A8A; 
+  --color-success: #3B82F6; 
+  --color-danger: #EF4444; 
+  --color-warning: #F59E0B; 
+  --color-font-main: #E5E7EB; 
+  --color-font-sec: #94A3B8; 
+  --color-border: #475569; 
+  --color-border-form: #64748B; 
+  --color-bg-light: #1E293B; 
+  --color-bg-dark: #0F172A; 
+  --font-main: "Poppins", sans-serif;
+  --font-head: "Roboto", sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font-head);
+  color: var(--color-font-main);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-success);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-warning);
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-font-main);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+
+form {
+  width: 80%;
+  max-width: 450px;
+  margin: 2rem auto;
+  background: var(--color-bg-light);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border: 1px solid var(--color-border-form);
+}
+
+form .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border: 1px solid var(--color-border-form);
+  border-radius: 0.5rem;
+  background: var(--color-bg-dark);
+  color: var(--color-font-main);
+}
+
+form .form-control:focus {
+  border-color: var(--color-main);
+  box-shadow: 0 0 5px var(--color-main);
+  outline: none;
+}
+
+form .form-control::placeholder {
+  color: var(--color-font-sec);
+}
+
+form .btn-form {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-main);
+  color: var(--color-font-main);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form .btn-form:hover {
+  background: #3749A9; 
+}
+
+form .btn-form:active {
+  transform: scale(0.98);
+}
+
+form .login-ask {
+  font-size: 14px;
+  text-align: center;
+}
+
+form .login-ask a {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+form .login-ask a:hover {
+  color: var(--color-warning);
+}
+
+
+.form-control.is-valid {
+  border-color: var(--color-success);
+}
+
+.form-control.is-invalid {
+  border-color: var(--color-danger);
+}
+
+.valid-feedback {
+  color: var(--color-success);
+}
+
+.invalid-feedback {
+  color: var(--color-danger);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  animation: fadeIn 0.6s ease-out;
+}
+
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  form .btn-form {
+    font-size: 0.9rem;
+  }
+}
